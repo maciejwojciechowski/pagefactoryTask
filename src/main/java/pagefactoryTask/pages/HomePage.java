@@ -8,6 +8,11 @@ public class HomePage {
     @FindBy(css = ".navbar #li_myaccount")
     private WebElement buttonMyAccout;
 
-    @FindBy(css = "") //mozna po partialLink (cos jak contains ale po href linkach chodzi. poczytaj)
+    @FindBy(partialLinkText = "Login")
     private WebElement buttonLogIn;
+
+    public void clickOnLoginLink(){
+        buttonMyAccout.click();
+        buttonLogIn.click();
+    }
 }
